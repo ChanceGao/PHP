@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>聪明的汤姆猫</title>
+    <script language="javascript">
+        function selType(val) {
+            if (val == 'math') {
+                math.style.display = "block";
+                area.style.display = "none";
+            }
+            else if (val == 'area') {
+                math.style.display = "none";
+                area.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="CatWork.php" method="post">
+        <input type="radio" name="type" value="math" onclick="selType('math')" checked="checked">四则运算
+        <input type="radio" name="type" value="area" onclick="selType('area')">面积计算
+        <table id="math" style="display:block">
+            <tr>
+                <td colspan="3" align="left">四则运算</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="num1" value=""></td>
+                <td><select name="oper">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        
+                    </select></td>
+                <td><input type="text" name="num2" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" name="" value="计算"></td>
+            </tr>
+        </table>
+        <table id="area" style="display:none">
+            <tr>
+                <td>圆的半径</td>
+                <td><input type="text" name="radius" value=""></td>
+            </tr>
+            <tr>
+                <td>矩形的长和宽</td>
+                <td><input type="text" name="rec" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="" value="计算"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
