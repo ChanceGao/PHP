@@ -1,0 +1,1 @@
+insert into user (name,password,email,age) values('金刚',md5('199506'),'kingkong@163.com',25);
